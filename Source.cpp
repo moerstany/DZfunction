@@ -1,7 +1,7 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
-// если мы ставим количество строк равное 1, то получаем одномерный массив
+// РµСЃР»Рё РјС‹ СЃС‚Р°РІРёРј РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє СЂР°РІРЅРѕРµ 1, С‚Рѕ РїРѕР»СѓС‡Р°РµРј РѕРґРЅРѕРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ
 
 // nikak ne poluchaetcya sortirovky cdelat s voskresenya s kodom cidela?  pro dvumernue massivi: net sortirovki/ 
 
@@ -18,30 +18,30 @@ void MassivMax(int arr1[STROK][STOL], const int n, const int m);
 void MassivMin(int arr1[STROK][STOL], const int n, const int m);
 
 void PrintMassiv(int arr1[STROK][STOL], const int n, const int m);
-void PrintSort(int arr1[STROK][STOL], const int n, const int m);
+//void PrintSort(int arr1[STROK][STOL], const int n, const int m);
 
 
-void Massiv(double arr1[STROK][STOL], const int n, const int m);
-void MassivSort(double arr1[STROK][STOL], const int n, const int m);
-void MassivSum(double arr1[STROK][STOL], const int n, const int m);
-void MassivAVG(double arr1[STROK][STOL], const int n, const int m);
-void MassivMax(double arr1[STROK][STOL], const int n, const int m);
-void MassivMin(double arr1[STROK][STOL], const int n, const int m);
+void Massiv(double arr2[STROK][STOL], const int n, const int m);
+void MassivSort(double arr2[STROK][STOL], const int n, const int m);
+void MassivSum(double arr2[STROK][STOL], const int n, const int m);
+void MassivAVG(double arr2[STROK][STOL], const int n, const int m);
+void MassivMax(double arr2[STROK][STOL], const int n, const int m);
+void MassivMin(double arr2[STROK][STOL], const int n, const int m);
 
-void PrintMassiv(double arr1[STROK][STOL], const int n, const int m);
-void PrintSort(double arr1[STROK][STOL], const int n, const int m);
+void PrintMassiv(double arr2[STROK][STOL], const int n, const int m);
+void PrintSort(double arr2[STROK][STOL], const int n, const int m);
 
 
-void Massiv(char arr1[STROK][STOL], const int n, const int m);
-void MassivSort(char arr1[STROK][STOL], const int n, const int m);
-void MassivSum(char arr1[STROK][STOL], const int n, const int m);
-void MassivAVG(char arr1[STROK][STOL], const int n, const int m);
-void MassivMax(char arr1[STROK][STOL], const int n, const int m);
-void MassivMin(char arr1[STROK][STOL], const int n, const int m);
+void Massiv(char arr3[STROK][STOL], const int n, const int m);
+void MassivSort(char arr3[STROK][STOL], const int n, const int m);
+void MassivSum(char arr3[STROK][STOL], const int n, const int m);
+void MassivAVG(char arr3[STROK][STOL], const int n, const int m);
+void MassivMax(char arr3[STROK][STOL], const int n, const int m);
+void MassivMin(char arr3[STROK][STOL], const int n, const int m);
 
-void PrintMassiv(char arr1[STROK][STOL], const int n, const int m);
-void PrintSort(char arr1[STROK][STOL], const int n, const int m);
-
+void PrintMassiv(char arr3[STROK][STOL], const int n, const int m);
+void PrintSort(char arr3[STROK][STOL], const int n, const int m);
+#define DEBUG
 
 
 
@@ -55,71 +55,71 @@ void main()
 	
 	const int n = STROK; const int m = STOL;
 
-	cout << "\t Массив типа INT" << "\n";
+	cout << "\t РњР°СЃСЃРёРІ С‚РёРїР° INT" << "\n";
 	Massiv(arr1, STROK, STOL); cout << "\n\n";
 	PrintMassiv(arr1, STROK, STOL); cout << "\n\n";
 
-	cout << "\t Cортируем числа в массиве типа INT " << " "; cout << "\n";
+	cout << "\t CРѕСЂС‚РёСЂСѓРµРј С‡РёСЃР»Р° РІ РјР°СЃСЃРёРІРµ С‚РёРїР° INT " << " "; cout << "\n";
 	MassivSort(arr1, STROK, STOL); cout << "\n";
 	
 
-	cout << "\t Сумма чисел в массиве типа INT " << " "; 
+	cout << "\t РЎСѓРјРјР° С‡РёСЃРµР» РІ РјР°СЃСЃРёРІРµ С‚РёРїР° INT " << " "; 
 	MassivSum(arr1, STROK, STOL); cout << "\n";
 	
 
-	cout << "\t среднее значение в массиве типа INT " << " ";
+	cout << "\t СЃСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ С‚РёРїР° INT " << " ";
 	MassivAVG(arr1, STROK, STOL); cout << "\n";
 
-	cout << "\t Максимальное значение массива типа INT " << " ";
+	cout << "\t РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР° С‚РёРїР° INT " << " ";
 	MassivMax(arr1, STROK, STOL); cout << "\n";
 
-	cout << "\t Минимальное значение  массива типа INT " << " ";
+	cout << "\t РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ  РјР°СЃСЃРёРІР° С‚РёРїР° INT " << " ";
 	MassivMin(arr1, STROK, STOL);  cout << "\n";
 
 	cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl;
 
-	cout << "\t Массив типа DOUBLE" << "\n";
+	cout << "\t РњР°СЃСЃРёРІ С‚РёРїР° DOUBLE" << "\n";
 	Massiv(arr2, STROK, STOL); cout << "\n\n";
 	PrintMassiv(arr2, STROK, STOL); cout << "\n\n";
 
-	cout << "\t Cортируем числа в массиве " << " "; cout << "\n";
+	cout << "\t CРѕСЂС‚РёСЂСѓРµРј С‡РёСЃР»Р° РІ РјР°СЃСЃРёРІРµ " << " "; cout << "\n";
 	MassivSort(arr2, STROK, STOL); cout << "\n";
 
 
-	cout << "\t Сумма чисел в массиве " << " ";
+	cout << "\t РЎСѓРјРјР° С‡РёСЃРµР» РІ РјР°СЃСЃРёРІРµ " << " ";
 	MassivSum(arr2, STROK, STOL); cout << "\n";
 
 
-	cout << "\t среднее значение в массиве " << " ";
+	cout << "\t СЃСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ " << " ";
 	MassivAVG(arr2, STROK, STOL); cout << "\n";
 
-	cout << "\t Максимальное значение массива  " << " ";
+	cout << "\t РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°  " << " ";
 	MassivMax(arr2, STROK, STOL); cout << "\n";
 
-	cout << "\t Минимальное значение  массива  " << " ";
+	cout << "\t РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ  РјР°СЃСЃРёРІР°  " << " ";
 	MassivMin(arr2, STROK, STOL);  cout << "\n";
 	cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl;
 	
 
-	cout << "\t Массив типа CHAR" << "\n";
+	cout << "\t РњР°СЃСЃРёРІ С‚РёРїР° CHAR" << "\n";
 	Massiv(arr3, STROK, STOL); cout << "\n\n";
 	PrintMassiv(arr3, STROK, STOL); cout << "\n\n";
 
-	cout << "\t Cортируем числа в массиве " << " "; cout << "\n";
+	cout << "\t CРѕСЂС‚РёСЂСѓРµРј С‡РёСЃР»Р° РІ РјР°СЃСЃРёРІРµ " << " "; cout << "\n";
 	MassivSort(arr3, STROK, STOL); cout << "\n";
 
 
-	cout << "\t Сумма чисел в массиве типа" << " ";
+	cout << "\t РЎСѓРјРјР° С‡РёСЃРµР» РІ РјР°СЃСЃРёРІРµ С‚РёРїР°" << " ";
 	MassivSum(arr3, STROK, STOL); cout << "\n";
 
 
-	cout << "\t среднее значение в массиве " << " ";
+	cout << "\t СЃСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ " << " ";
 	MassivAVG(arr3, STROK, STOL); cout << "\n";
 
-	cout << "\t Максимальное значение массива  " << " ";
+	cout << "\t РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°  " << " ";
 	MassivMax(arr3, STROK, STOL); cout << "\n";
 
-	cout << "\t Минимальное значение  массива  " << " ";
+	cout << "\t РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ  РјР°СЃСЃРёРІР°  " << " ";
 	MassivMin(arr3, STROK, STOL);  cout << "\n";
 	cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl;
 
@@ -144,28 +144,53 @@ void Massiv(int arr1[STROK][STOL], const int n, const int m)
 
 void MassivSort(int arr1[STROK][STOL], const int n, const int m)
 {
-	
-	for (int i = 0; i < n; i++)
 	{
-		
-		for (int j = 0; j < m; j++)
+#ifdef DEBUG
+		int iterations = 0;
+		int exchanges = 0;
+#endif // DEBUG
+
+		for (int i = 0; i < m; i++)
 		{
-				int sort = 0;		
-				if (arr1[i][j] > arr1[i][j])
-				{   
-					sort = arr1[i][j];
-					
-					arr1[i][j] = sort; 
-					
-				} 
-				
-		 cout << arr1[i][j] << endl;
-			
-		} 
-  
+			for (int j = 0; j < n; j++)
+			{
+				for (int k = i; k < m; k++)
+				{
+
+					int l;
+					if (k == i)l = j + 1;
+					else l = 0;
+
+					//			condition ? value1 : value2;
+					for (int l = (k == i) ? j + 1 : 0; l < n; l++)
+					{
+#ifdef DEBUG
+						iterations++;
+#endif // DEBUG
+						if (/*ГЏГ…ГђГ…ГЃГ€ГђГЂГ…ГЊГ›Г‰ ГќГ‹Г…ГЊГ…ГЌ*/arr1[k][l] < arr1[i][j]/*Г‚Г›ГЃГђГЂГЌГЌГ›Г‰ ГќГ‹Г…ГЊГ…ГЌ*/)
+						{
+							int buffer = arr1[i][j];
+							arr1[i][j] = arr1[k][l];
+							arr1[k][l] = buffer;
+#ifdef DEBUG
+							exchanges++;
+#endif // DEBUG
+
+						} 
+					}cout << " " << arr1[k][l] << " \n";
+				}
+			}
+		}
+#ifdef DEBUG
+		cout << " " << iterations << " \n";
+		cout << " " << exchanges << " \n";
+		
+
+
+#endif // DEBUG
 	} 
-	 
-} 
+
+}
 
 void MassivSum(int arr1[STROK][STOL], const int n, const int m)
 {
@@ -249,26 +274,27 @@ void PrintMassiv(int arr1[STROK][STOL], const int n, const int m)
 	
 }
 
-void PrintSort(int arr1[STROK][STOL], const int n, const int m)
+/*void PrintSort(int arr1[STROK][STOL], const int n, const int m)
 
 {
-	int i, j, k;
+	int iterations = 0;
+	int exchanges = 0;
+	int l;
 	for (int i = 0; i < n; i++)
 	{
 
-		for (int j = 0; j < m; j++)
+		for (int j = 0; j < n; j++)
 		{
-			for (int k = j; k < m; k++)
+			for (int k = i; k < m; k++)
 			{
-				 cout << arr1[i][k] << "\t";
+				cout << arr1[k][l];
 
 			}
 		}
-       cout << endl;
-	}
-	
-}
 
+	}
+
+}*/
 
 void PrintAVG(int arr1[STROK][STOL], const int n, const int m)
 {
